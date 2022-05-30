@@ -1,0 +1,29 @@
+﻿<!-- sayfanın model tipi List<Ogrenci>'dir. Model view'ın temsil ettiği sınıfı gösterir -->
+
+@model List<Ogrenci> 
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <!-- model => Model bildirimi yapar.
+         Model => Model'e erişim sağlar.
+
+    -->
+
+    @foreach (var item in Model)
+    {
+        <h1> @item.Adi  & @item.SoyAdi </h1>
+    }
+
+</body>
+</html>
